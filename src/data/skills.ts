@@ -71,7 +71,7 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Languages & Mobile",
     skills: [
-      { name: "Python", icon: SiPython, color: "#3776AB", level: "Familiar" },
+      { name: "Python", icon: SiPython, color: "#3776AB", level: "Strong" },
       { name: "Java", icon: FaJava, color: "#ED8B00", level: "Familiar" },
       { name: "PHP", icon: SiPhp, color: "#777BB4", level: "Familiar" },
       { name: "Dart", icon: SiDart, color: "#0175C2", level: "Familiar" },
