@@ -1,19 +1,11 @@
+import { Hero } from "@/components/sections/Hero";
+
 const sections = ["about", "skills", "education", "projects", "contact"];
 
 export default function Home() {
   return (
     <main>
-      <section
-        id="home"
-        className="flex min-h-screen flex-col items-center justify-center gap-4 px-4 pt-16 text-center"
-      >
-        <h1 className="font-heading text-4xl font-extrabold sm:text-5xl">
-          <span className="bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">
-            Tasdid Ahmed Ahan
-          </span>
-        </h1>
-        <p className="text-muted">Full-Stack Web Developer | CS Graduate</p>
-      </section>
+      <Hero />
 
       {sections.map((id) => (
         <section
