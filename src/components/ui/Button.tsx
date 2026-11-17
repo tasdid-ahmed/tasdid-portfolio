@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type ButtonProps = {
   href: string;
   variant?: "primary" | "outline";
@@ -24,8 +26,21 @@ export function Button({
   className = "",
   ...rest
 }: ButtonProps) {
+  const classes = `${base} ${variants[variant]} ${className}`;
+  // Paths that start with "/" and have no file extension are pages; anything else
+  // (files like .pdf, external URLs) is a plain link.
+  const isPage = href.startsWith("/") && !/\.[a-z0-9]+$/i.test(href);
+
+  if (isPage) {
+    return (
+      <Link href={href} className={classes} {...rest}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <a href={href} className={`${base} ${variants[variant]} ${className}`} {...rest}>
+    <a href={href} className={classes} {...rest}>
       {children}
     </a>
   );

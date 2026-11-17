@@ -6,6 +6,7 @@ export const profile = {
     "I build complete web products end to end, from responsive interfaces to authentication and APIs, using Next.js, TypeScript, Node.js and MongoDB.",
   photo: "/images/profile.png",
   resume: "/resume/Tasdid-Ahmed-Ahan-CV.pdf",
+  resumeFileName: "Tasdid-Ahmed-Ahan-CV.pdf",
   email: "tasdidahmed.official@gmail.com",
   socials: {
     github: "https://github.com/tasdid-ahmed",

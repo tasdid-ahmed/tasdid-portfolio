@@ -61,14 +61,14 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex animate-fade-up flex-wrap justify-center gap-3 [animation-delay:400ms] motion-reduce:animate-none lg:justify-start">
-            <Button href={profile.resume} target="_blank" rel="noopener noreferrer">
+            <Button href="/resume">
               <Eye className="h-4 w-4" />
               View Resume
             </Button>
             <Button
               href={profile.resume}
               variant="outline"
-              download="Tasdid-Ahmed-Ahan-CV.pdf"
+              download={profile.resumeFileName}
             >
               <Download className="h-4 w-4" />
               Download CV
