@@ -10,21 +10,21 @@ const chips = [
     label: "Next.js",
     icon: SiNextdotjs,
     color: "text-foreground",
-    position: "-left-2 top-6 sm:-left-8",
+    position: "-left-2 top-6 -left-8",
     delay: "0s",
   },
   {
     label: "TypeScript",
     icon: SiTypescript,
     color: "text-[#3178c6]",
-    position: "-right-2 top-1/3 sm:-right-8",
+    position: "-right-2 top-1/3 -right-8",
     delay: "1.5s",
   },
   {
     label: "MongoDB",
     icon: SiMongodb,
     color: "text-[#47a248]",
-    position: "-bottom-3 left-8 sm:left-12",
+    position: "-bottom-3 left-8 left-12",
     delay: "3s",
   },
 ];
@@ -103,7 +103,7 @@ export function Hero() {
               <div
                 key={label}
                 style={{ animationDelay: delay }}
-                className={`absolute ${position} flex animate-float items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur motion-reduce:animate-none`}
+                className={`absolute ${position} hidden animate-float items-center gap-2 rounded-full border border-border bg-surface/90 px-3 py-2 text-xs font-semibold shadow-lg backdrop-blur motion-reduce:animate-none sm:flex`}
               >
                 <Icon className={`h-4 w-4 ${color}`} />
                 {label}
