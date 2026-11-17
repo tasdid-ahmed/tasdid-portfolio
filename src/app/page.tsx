@@ -1,25 +1,29 @@
 import { Hero } from "@/components/sections/Hero";
-import { SkillsMarquee } from "@/components/ui/SkillsMarquee";
-
-const sections = ["about", "skills", "education", "projects", "contact"];
+import { About } from "@/components/sections/About";
+import { Skills } from "@/components/sections/Skills";
+import { Education } from "@/components/sections/Education";
+import { Contact } from "@/components/sections/Contact";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
+      <Skills />
+      <Education />
 
-      {sections.map((id) => (
-        <section
-          key={id}
-          id={id}
-          className="flex min-h-[60vh] items-center justify-center border-t border-border px-4"
-        >
-          <div className="flex w-full min-w-0 flex-col items-center gap-8 max-w-7xl">
-            <h2 className="font-heading text-3xl font-bold capitalize">{id}</h2>
-            {id === "skills" && <SkillsMarquee />}
-          </div>
-        </section>
-      ))}
+      {/* Temporary placeholder until the Projects phase */}
+      <Section id="projects" alt>
+        <SectionHeading
+          eyebrow="Projects"
+          title="Selected work"
+          description="Project case studies are coming soon."
+        />
+      </Section>
+
+      <Contact />
     </main>
   );
 }
